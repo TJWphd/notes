@@ -30,7 +30,6 @@ apiSubrouter.post("/notes", (req, res) => {
       console.log(notes);
       const newNote = req.body;
       newNote.id = Math.random();
-      console.log(id);
       notes.push(newNote);
       fs.writeFile(dbFilePath, JSON.stringify(notes), (error) => {
         if (error) {
@@ -50,10 +49,10 @@ apiSubrouter.delete("/notes/:id", (req, res) => {
     } else {
       const notes = JSON.parse(data);
       console.log(notes);
-      console.log(req.params);
+      let id = parseFloat(req.params.id);
+      const updatedNotes = notes.filter((note) => note.id !== id);
 
-      // todo: turn req.params.id into a number, then remove note from array by ID.
-      fs.writeFile(dbFilePath, JSON.stringify(notes), (error) => {
+      fs.writeFile(dbFilePath, JSON.stringify(updatedNotes), (error) => {
         if (error) {
           console.log(error);
         } else {
