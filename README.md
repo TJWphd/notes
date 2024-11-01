@@ -10,7 +10,11 @@ This app uses server-side storage and express routes in JavaScript, unlike earli
 
 ## Deployment
 
-## credits and acknowledgements
+Repo: https://github.com/TJWphd/notes
+Deployment: https://tjwphd.github.io/notes
+Screenshot: ./public/assets/images/notes-screenshot
+
+## Credits and Acknowledgements
 
 Client side is source code, primarily untouched, from the class repo (edX/UCB Bootcamp, week 11).
 
