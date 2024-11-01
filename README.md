@@ -10,8 +10,9 @@ This app uses server-side storage and express routes in JavaScript, unlike earli
 
 ## Deployment
 
-Repo: https://github.com/TJWphd/notes
-Deployment: https://tjwphd.github.io/notes
+Repo Link: https://github.com/TJWphd/notes
+Deployment Link: https://tjwphd.github.io/notes
+Deployment Instructions: open with localhost:3001. install and run node on your server and go live. notes can then be added, saved, edited, and deleted on the client side (localhost).
 Screenshot: ./public/assets/images/notes-screenshot
 
 ## Credits and Acknowledgements
