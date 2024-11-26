@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 
-// TODO import the routes
+// import the routes
 const apiRoutes = require("./routes/notes");
 const PORT = 3001;
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// TODO apply middleware to use /api
+// apply middleware to use /api
 app.use("/api", apiRoutes);
 
 // GET Route for homepage
@@ -24,8 +24,7 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
-// TODO move the /api/tips routes to their own file
-
+// move the /api/tips routes to their own file
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 );
